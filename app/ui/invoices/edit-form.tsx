@@ -144,7 +144,7 @@ export default function EditInvoiceForm({
         </fieldset>
         <div aria-live="polite" aria-atomic="true">
           {
-            (!state.errors?.status || !state.errors?.customerId || !state.errors?.amount) &&
+            (state.errors?.status || state.errors?.customerId || state.errors?.amount) &&
               <p className="mt-2 text-sm text-red-500">
                 {state.message}
               </p>
